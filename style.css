@@ -53,6 +53,14 @@ header {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 2px;
+  color: blue;
+}
+.header-sign .blue {
+  color: #007BFF; 
+}
+
+.header-sign .yellow {
+  color: #FFD700; 
 }
 
 
