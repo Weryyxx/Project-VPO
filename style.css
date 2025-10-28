@@ -1,13 +1,15 @@
+/*#region Reset & Global*/
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
-  min-height: 100%;
+  min-height: 100vh;
   width: 100vw;
-  overflow-x: hidden ;
+  overflow-x: hidden;
 }
+/*#endregion*/
 
-
+/*#region Header*/
 a {
   opacity: 0;
 }
@@ -19,7 +21,7 @@ header {
   left: 0;
   width: 100%;
   height: 70px;
-  z-index: 1001;
+  z-index: 1001 !important;
 }
 
 .header {
@@ -54,8 +56,15 @@ header {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 2px;
+  color: blue;
+}
+.header-sign .blue {
+  color: #007BFF; 
 }
 
+.header-sign .yellow {
+  color: #FFD700; 
+}
 
 .account {
   width: 40px;
@@ -71,19 +80,25 @@ header {
   border-radius: 50%;
 }
 
-
 .ai-chatbot-icon-container {
   position: absolute;
+  top: 15px;
+  right: 75px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2196F3;     
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  top: 20px;
-  right: 75px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.ai-chatbot-icon-container img {
+  width: 70%;          
+  height: 70%;
+  object-fit: contain; 
+  display: block;
 }
 
 .ai-chatbot-icon {
@@ -91,7 +106,6 @@ header {
   color: white;
   margin: 0 !important;
 }
-
 
 .language-container {
   position: absolute;
@@ -113,12 +127,9 @@ header {
   font-weight: bold;
 }
 
-
-
 .active {
   text-decoration: underline;
 }
-
 
 .searchbar {
   position: absolute;
@@ -135,14 +146,12 @@ header {
   box-sizing: border-box;
   cursor: pointer;
   transition: all 0.2s ease;
-
 }
 
 .searchbar:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   width: 20vw;
 }
-
 
 input{
   border: none;
@@ -155,21 +164,67 @@ input{
 .account_icon {
   margin: 0 !important;
 }
+/*#endregion*/
 
+/*#region Mobile Search*/
 .search_icon_mobile {
-    display: none !important;
-  }
+  display: none !important;
+}
 
+.mobile_search_container {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 999;
+  background-color: #bababa;
+  transition: all 0.35s ease-in-out;
+}
 
+.mobile_search_container_active {
+  top: 70px;
+}
 
+.searchbar_mobile {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
+.close_mobile_search {
+  position: absolute;
+  left: -35px;
+  font-size: 25px !important;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin-left: 0 !important;
+}
+
+.close_mobile_search:hover {
+  color: rgb(221, 221, 221);
+}
+/*#endregion*/
+
+/*#region Sidebar*/
 .sidebar {
   position: fixed;
   z-index: 1000;
   width: 60px;
   height: 100%;
   background-color: #929292;
-
   top: 0;
   left: 0;
   transition: width 0.15s ease-in-out;
@@ -178,23 +233,20 @@ input{
 
 .sidebar:hover {
   width: 270px;
-  
 }
 
 .sidebar:hover .sidebar-item {
   justify-content: flex-start;
-  
 }
+/*#endregion*/
 
-
-
+/*#region Mobile Sidebar*/
 .sidebar_mobile {
   position: absolute;
   z-index: 1000;
   width: 200px;
   height: 100%;
   background-color: #929292;
-
   top: 70px;
   left: 0;
   transition: all 0.2s ease-in-out;
@@ -206,14 +258,14 @@ input{
 .sidebar_mobile_active {
   transform: translateX(0%);
 }
+/*#endregion*/
 
-
+/*#region Icons & Menu*/
 .material-symbols-outlined {
   font-size: 27px !important;
   transition: all 0.1s ease-in-out;
   margin-left: 10px;
 }
-
 
 .burger_menu {
   color: white;
@@ -223,17 +275,11 @@ input{
   margin-top: 5px;
   margin-bottom: 40px;
   transition: all 0.15s ease-in-out;
-
 }
-
-
-
-
 
 .burger_menu:hover {
   color: rgb(221, 221, 221);
 }
-
 
 .burger_menu_mobile {
   color: white;
@@ -243,12 +289,14 @@ input{
   margin-top: 15px;
   margin-bottom: 40px;
   transition: all 0.15s ease-in-out;
-
 }
 
+.burger_menu_mobile:hover {
+  color: rgb(221, 221, 221);
+}
+/*#endregion*/
 
-
-
+/*#region Sidebar Items*/
 .sidebar-item {
   display: flex;
   align-items: center;
@@ -266,21 +314,17 @@ input{
   min-width: 40%;
   margin-bottom: 15px;
   transition: all 0.15s ease-in-out;
-
 }
 
 .search_icon {
   font-size: 22px !important;
 }
 
-
-.label  {
-  
+.label {
   display: inline-flex;
   opacity: 0;
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
-  
 }
 
 .label p {
@@ -301,9 +345,7 @@ input{
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-
 }
-
 
 .sidebar-item img {
   justify-self: center;
@@ -313,10 +355,10 @@ input{
 .sidebar-item:hover .label p,
 .sidebar-item:hover .material-symbols-outlined {
   color: #559EFF;
-  
 }
+/*#endregion*/
 
-
+/*#region navigation*/
 #nav1 {
   animation: nav1Appear 0.5s forwards;
   animation-delay: 0.5s;
@@ -371,10 +413,53 @@ input{
   animation: nav1Appear 0.5s forwards;
   animation-delay: 2.5s;
 }
+/*#endregion*/
+
+/*#region section1-general*/
+.section1-general{
+  display: flex;
+  align-items: flex-start;        
+  gap: 40px;                      
+  padding: 24px 32px;
+  margin: 100px 80px 40px 120px; 
+  background: #f6f6f6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
 
 
+.section1-general .welcome-text{
+  flex: 1;             
+  max-width: 50%;         
+}
+
+.section1-general .welcome-text h1{
+  margin-top: 16px;
+  font-size: 28px;
+  color: #333;
+}
+
+.section1-general .welcome-text p{
+  margin-top: 12px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
 
 
+.section1-general .welcome-image{
+  flex: 0 0 40%;          
+}
+
+.section1-general .welcome-image img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+/*#endregion*/
+
+/*#region animations*/
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -451,12 +536,21 @@ input{
   100% { opacity: 1; }
     
 }
+/*#endregion*/
+/*#region media_queries*/
+@media (max-width: 900px) {
+  .section1-general {
+    flex-direction: column;     
+    align-items: flex-start;   
+    gap: 20px;                  
+  }
 
+  .section1-general .welcome-text,
+  .section1-general .welcome-image {
+    max-width: 100%;          
+  }
 
-
-
-
-
+}
 
 @media (max-width: 768px) {
   .sidebar {
@@ -494,6 +588,11 @@ input{
     right: 105px;
     top: 22px;
     cursor: pointer;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .search_icon_mobile:hover {
+    color: rgb(221, 221, 221);
   }
 
   .ai-chatbot-icon-container {
@@ -526,4 +625,15 @@ input{
   .sidebar_mobile_active {
     display: none;
   }
+
+  .mobile_search_container_active {
+    display: none;
+  }
 }
+
+@media (max-width: 425px) {
+  .searchbar_mobile {
+    width: 70%;
+  }
+}
+/*#endregion*/
