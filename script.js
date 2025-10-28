@@ -22,3 +22,10 @@ search_icon_mobile.addEventListener("click", function() {
   }
 
 });
+
+
+close_mobile_search = document.querySelector(".close_mobile_search");
+
+close_mobile_search.addEventListener("click", function() {
+  document.querySelector(".mobile_search_container").classList.remove("mobile_search_container_active");
+});
