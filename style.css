@@ -25,6 +25,8 @@ header {
   width: 100%;
   height: 70px;
   z-index: 1001 !important;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
 }
 
 .header {
@@ -32,8 +34,14 @@ header {
   height: 100%;
   background-color: #929292;
   position: relative;
-
+  transition: all 0.3s ease-in-out;
+  
 }
+
+.header_hide {
+  transform: translateY(-100%);
+}
+
 
 .header-sign-container {
   position: absolute;
@@ -184,11 +192,11 @@ input{
   width: 100%;
   height: 70px;
   position: fixed;
-  top: 0px;
+  top: -70px;
   left: 0;
   z-index: 999;
   background-color: #bababa;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .mobile_search_container_active {
@@ -230,7 +238,7 @@ input{
 /*#region Sidebar*/
 .sidebar {
   position: fixed;
-  z-index: 1000;
+  z-index: 1002;
   width: 60px;
   min-height: 100vh;
   background-color: #929292;
@@ -257,11 +265,11 @@ input{
   width: 200px;
   height: 100%;
   background-color: #929292;
-  top: 70px;
+  top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   padding: 10px;
-  padding-top: 30px;
+  padding-top: 100px;
   transform: translateX(-100%);
 }
 
@@ -502,6 +510,21 @@ input{
 }
 /*#endregion*/
 
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #929292;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+
 /*#region animations*/
 @keyframes fadeInLeft {
   0% {
@@ -604,6 +627,7 @@ input{
     padding: 50px;
   }
   
+
   .sidebar {
     display: none;
   }
@@ -681,6 +705,10 @@ input{
 
   .mobile_search_container_active {
     display: none;
+  }
+
+  .burger_menu_mobile {
+    display: none !important;
   }
 
 }
