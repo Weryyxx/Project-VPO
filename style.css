@@ -1,10 +1,13 @@
 /*#region Reset & Global*/
+
+
 body {
   margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 /*#endregion*/
@@ -149,12 +152,12 @@ header {
   transition: width 0.2s ease, box-shadow 0.15s ease; 
   left: auto;
   right: 190px;
-  width: 330px;
+  width: 300px;
   z-index: 1;
 }
 
 .searchbar:hover {
-    width: calc(330px + 30px);
+    width: calc(300px + 50px);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -229,12 +232,13 @@ input{
   position: fixed;
   z-index: 1000;
   width: 60px;
-  height: 100%;
+  min-height: 100vh;
   background-color: #929292;
   top: 0;
   left: 0;
   transition: width 0.15s ease-in-out;
-  padding: 10px;
+  padding: 10px; 
+
 }
 
 .sidebar:hover {
@@ -248,7 +252,7 @@ input{
 
 /*#region Mobile Sidebar*/
 .sidebar_mobile {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   width: 200px;
   height: 100%;
@@ -421,13 +425,39 @@ input{
 }
 /*#endregion*/
 
+ main {
+  /* width: calc(100% - 80px);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 70px; */
+
+
+  margin-top: 70px;  /* щоб не залазив під хедер */
+  margin-left: 80px; /* щоб не залазив під сайдбар */
+  background-color: #ffffff;
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+
+
 /*#region section1-general*/
 .section1-general{
   display: flex;
-  align-items: flex-start;        
+  justify-content: center; 
+  align-items: center;   
   gap: 40px;                      
   padding: 24px 32px;
-  margin: 100px 80px 40px 120px; 
+  /* margin: 100px 80px 40px 120px;  */
   background: #f6f6f6;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -436,7 +466,8 @@ input{
 
 .section1-general .welcome-text{
   flex: 1;             
-  max-width: 50%;         
+  max-width: 50%;
+  align-self: flex-start !important;      
 }
 
 .section1-general .welcome-text h1{
@@ -454,11 +485,17 @@ input{
 
 
 .section1-general .welcome-image{
-  flex: 0 0 40%;          
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex: 1;          
 }
 
 .section1-general .welcome-image img{
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -560,6 +597,13 @@ input{
 }
 
 @media (max-width: 795px) {
+  main {
+    margin-top: 70px !important;
+    margin: 0;
+    width: 100%;
+    padding: 50px;
+  }
+  
   .sidebar {
     display: none;
   }
@@ -648,4 +692,15 @@ input{
 
 }
 
+
+@media (max-width: 880px) {
+  .searchbar {
+    width: 220px;
+  }
+  
+  .searchbar:hover {
+    width: calc(220px + 30px);
+
+}
+}
 /*#endregion*/
