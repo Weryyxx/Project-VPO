@@ -1,3 +1,4 @@
+
 burder_menu = document.querySelector(".burger_menu_mobile");
 
 
@@ -29,3 +30,26 @@ close_mobile_search = document.querySelector(".close_mobile_search");
 close_mobile_search.addEventListener("click", function() {
   document.querySelector(".mobile_search_container").classList.remove("mobile_search_container_active");
 });
+
+
+
+
+
+let yprev = window.pageYOffset; 
+
+header = document.querySelector(".header");
+
+window.addEventListener('scroll', () => {
+  const y = window.pageYOffset;
+  if (yprev > y) {
+    header.classList.remove("header_hide");
+  } else {
+    header.classList.add("header_hide");
+  }
+  yprev = y;
+});
+
+
+
+
+
