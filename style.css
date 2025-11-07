@@ -133,6 +133,18 @@ header {
   z-index: 2; 
 }
 
+.language-container-mobile {
+  width: 60px;
+  height: 30px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001; 
+}
+
+
 .language-container p {
   margin: 4px;
   font-size: 12px;
@@ -140,6 +152,25 @@ header {
   cursor: pointer;
   font-weight: bold;
 }
+
+
+ .language-container-mobile p {
+  margin: 4px;
+  font-size: 12px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.label-mobile p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+  cursor: default;
+  font-weight: bold;
+}
+
 
 .active {
   text-decoration: underline;
@@ -159,7 +190,7 @@ header {
   cursor: pointer;
   transition: width 0.2s ease, box-shadow 0.15s ease; 
   left: auto;
-  right: 190px;
+  right: 280px;
   width: 300px;
   z-index: 1;
 }
@@ -525,6 +556,85 @@ footer {
 }
 
 
+
+
+body.dark { 
+    background:#000; 
+    color:#fff; 
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  #themeButton, #themeButtonMobile {
+    background: white;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 10px;
+    transition: background 0.4s, border-color 0.4s;
+  }
+
+  body.dark #themeButton, body.dark #themeButtonMobile {
+    background: #000;
+    border-color: #fff;
+  }
+
+ 
+  #sun line, #sun circle, #sunMob line, #sunMob circle {
+    stroke: #000;
+    fill: #000;
+    transition: stroke .4s, fill .4s;
+  }
+
+  #moon path, #moonMob path {
+    stroke: #000;
+    fill: #000;
+    transition: stroke .4s, fill .4s;
+  }
+
+  rect {
+    stroke: #000;
+    fill: #fff;
+    transition: stroke .4s, fill .4s;
+  }
+
+
+  body.dark #sun line,
+  body.dark #sun circle, body.dark #sunMob line, body.dark #sunMob circle {
+    stroke: #fff;
+    fill: #fff;
+  }
+
+  body.dark #moon path, body.dark #moonMob path {
+    stroke: #fff;
+    fill: #fff;
+  }
+
+  body.dark rect {
+    stroke: #fff;
+    fill: #000;
+  }
+
+  #toggle-circle, #toggle-circle-mobile { 
+    transition: transform .6s ease, fill .4s;
+    fill: yellow;
+    opacity: 0.8;
+  }
+
+  body.dark #toggle-circle, body.dark #toggle-circle-mobile { 
+    transform: translateX(93px); 
+    fill: blue;
+  }
+
+
+  .inactive {
+    pointer-events: none !important;
+    cursor: default;
+  }
+
+
+
 /*#region animations*/
 @keyframes fadeInLeft {
   0% {
@@ -695,6 +805,15 @@ footer {
   }
   .language-container{ 
     display: flex !important; 
+  }
+
+
+  .desktop {
+    display: none !important;
+  }
+
+  .language-container {
+    display: none !important;
   }
 }
 
