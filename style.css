@@ -294,13 +294,16 @@ input{
   position: fixed;
   z-index: 1000;
   width: 200px;
-  height: 100%;
+  height: calc(100vh+100px);
+  overflow-y: auto;
   background-color: #929292;
   top: 0;
   left: 0;
+  bottom: 0 !important;
   transition: all 0.2s ease-in-out;
   padding: 10px;
   padding-top: 100px;
+  padding-bottom: 0px !important;
   transform: translateX(-100%);
 }
 
