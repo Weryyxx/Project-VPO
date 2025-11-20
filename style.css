@@ -1,6 +1,5 @@
 /*#region Reset & Global*/
 
-
 body {
   margin: 0;
   padding: 0;
@@ -29,10 +28,14 @@ header {
   transform: translateY(0);
 }
 
+.header-sign-container .header-p {
+  color: #559EFF;   
+}
+
 .header {
   min-width: 100%;
   height: 100%;
-  background-color: #929292;
+  background: linear-gradient(90deg, #F8F8F8, #E9F0F4);
   position: relative;
   transition: all 0.3s ease-in-out;
   
@@ -91,6 +94,7 @@ header {
   cursor: pointer;
   background-color: white;
   border-radius: 50%;
+  color : #559EFF;
 }
 
 .ai-chatbot-icon-container {
@@ -144,23 +148,29 @@ header {
   z-index: 1001; 
 }
 
-
 .language-container p {
   margin: 4px;
   font-size: 12px;
   color: white;
   cursor: pointer;
   font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
 }
 
-
- .language-container-mobile p {
+.language-container-mobile p {
   margin: 4px;
   font-size: 12px;
   color: black;
   cursor: pointer;
   font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
 
+.language-container-mobile p.active {
+  background-color: #559EFF;
+  color: #ffffff;
 }
 
 .label-mobile p {
@@ -251,7 +261,10 @@ input{
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
+.searchbar_mobile_input {
+  cursor: text;
+  color: #559EFF;
+}
 .close_mobile_search {
   position: absolute;
   left: -35px;
@@ -272,7 +285,7 @@ input{
   z-index: 1002;
   width: 60px;
   min-height: 100vh;
-  background-color: #929292;
+  background: linear-gradient(180deg, #F8F8F8, #E9F0F4);
   top: 0;
   left: 0;
   transition: width 0.15s ease-in-out;
@@ -320,7 +333,7 @@ input{
 }
 
 .burger_menu {
-  color: white;
+  color: #559EFF;
   font-size: 35px !important;
   cursor: pointer;
   margin-left: 12px;
@@ -360,6 +373,7 @@ input{
   padding-left: 6px;
   cursor: pointer;
   background-color: rgb(255, 255, 255);
+  color: #559EFF;
   border-radius: 8px;
   text-align: center;
   height: 35px;
@@ -499,8 +513,7 @@ input{
   align-items: center;   
   gap: 40px;                      
   padding: 24px 32px;
-  /* margin: 100px 80px 40px 120px;  */
-  background: #f6f6f6;
+  background: #E8F1FB;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
@@ -548,7 +561,7 @@ input{
 footer {
   width: 100%;
   height: 70px;
-  background-color: #929292;
+  background: linear-gradient(90deg, #F8F8F8, #E9F0F4);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -562,7 +575,7 @@ footer {
 
 
 body.dark { 
-    background:#000; 
+    background: black; 
     color:#fff; 
   }
 
@@ -854,3 +867,69 @@ body.dark {
 }
 }
 /*#endregion*/
+
+body {
+  background: #ffffff;
+  color: #000;
+}
+
+body.dark {
+  background: #020307;
+  color: #ffffff;
+}
+
+body.dark .header {
+  background: linear-gradient(90deg, #313946, #1A1F26);
+}
+
+body.dark .sidebar {
+  background: linear-gradient(180deg, #313946, #1A1F26);
+}
+
+body.dark .sidebar_mobile {
+  background: linear-gradient(180deg, #313946, #1A1F26);
+}
+
+body.dark main {
+  background: linear-gradient(160deg, #313946, #1A1F26);
+}
+
+body.dark .section1-general {
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+body.dark .footer,
+body.dark footer {
+  background: linear-gradient(90deg, #313946, #1A1F26);
+}
+
+body.dark .header-sign-container .header-p {
+  color: #559EFF;
+}
+
+body.dark .language-container p.active,
+body.dark .language-container-mobile p.active {
+  background-color: #559EFF;
+  color: #ffffff;
+}
+body.dark .sidebar-item, 
+body.dark .account,
+body.dark .searchbar,
+body.dark .searchbar_mobile,
+body.dark .searchbar input {
+  background-color: #393E46;
+}
+
+body.dark .section1-general .welcome-text h1,
+body.dark .section1-general .welcome-text p {
+  color: white;
+}
+
+* {
+  transition: background 0.35s ease, 
+              background-color 0.35s ease, 
+              color 0.35s ease,
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
