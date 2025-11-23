@@ -309,7 +309,7 @@ input{
   width: 200px;
   height: calc(100vh+100px);
   overflow-y: auto;
-  background-color: #929292;
+  background: linear-gradient(90deg, #F8F8F8, #E9F0F4);
   top: 0;
   left: 0;
   bottom: 0 !important;
@@ -935,9 +935,6 @@ body.dark .searchbar_mobile input {
   color: #ffffff;
 }
 
-body.dark .searchbar_mobile input::placeholder {
-  color: #C0C4C8;
-}
 
 body.dark .language-container p.active,
 body.dark .language-container-mobile p.active {
