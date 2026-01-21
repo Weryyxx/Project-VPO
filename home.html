@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project VPO</title>
+  <link rel="stylesheet" href="style_home.css">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="mobile_search_container">
+    <div class="searchbar_mobile">
+      <span class="material-symbols-outlined close_mobile_search">
+        keyboard_arrow_up
+      </span>
+      <input class="searchbar_mobile_input" type="text" placeholder="Пошук...">
+      <span class="material-symbols-outlined search_icon">
+        search
+      </span>
+    </div>
+  </div>
+  
+  <header>
+    <div class="header">
+      <span class="material-symbols-outlined burger_menu_mobile">
+        menu
+      </span>
+    
+      <div class="account">
+        <span class="material-symbols-outlined account_icon">
+          account_circle
+        </span>
+      </div>
+
+      <div class="ai-chatbot-icon-container">
+        <img src="Photos.index/chat-bot 1.png" alt="chat-bot">
+      </div>
+
+      <div class="language-container">
+        <p class="active">УКР</p>
+        <p>ENG</p>
+      </div>
+
+      <div class="searchbar">
+        <input type="text" placeholder="Пошук...">
+        <span class="material-symbols-outlined search_icon">
+          search
+        </span>
+      </div>
+
+      <div class="header-sign-container">
+        <h3 class="header-sign"><span class="blue">VPO</span> <span class="yellow">Help</span></h3>
+        <p class="header-p">Кременчук</p>
+      </div>
+    
+      <span class="material-symbols-outlined search_icon_mobile">
+        search
+      </span>
+
+    <div class="desktop" style="display:flex;justify-content:center;position: absolute; top: 10px ; width: 50px;height: 30ox; z-index: 1000; right: 200px;">
+    <button id="themeButton" style="background:none;border:none;padding:0;cursor:pointer">
+      <svg id="themeToggle" width="70" height="50" viewBox="0 0 186 90"
+          xmlns="http://www.w3.org/2000/svg" aria-label="Light/Dark toggle icon">
+
+        <rect x="3" y="3" width="180" height="84" rx="42" ry="42"
+              fill="blue" stroke="#000" stroke-width="4"/>
+
+        <g id="sun" transform="translate(46.5,45)" fill="none" stroke="#000" stroke-linecap="round">
+          <circle r="14" />
+          <line x1="0" y1="-24" x2="0" y2="-32" stroke-width="6"/>
+          <line x1="0" y1="24"  x2="0" y2="32"  stroke-width="6"/>
+          <line x1="-24" y1="0" x2="-32" y2="0" stroke-width="6"/>
+          <line x1="24"  y1="0" x2="32" y2="0" stroke-width="6"/>
+          <line x1="17"  y1="-17" x2="23" y2="-23" stroke-width="6"/>
+          <line x1="-17" y1="17"  x2="-23" y2="23"  stroke-width="6"/>
+          <line x1="-17" y1="-17" x2="-23" y2="-23" stroke-width="6"/>
+          <line x1="17"  y1="17"  x2="23" y2="23"  stroke-width="6"/>
+        </g>
+
+        <g id="moon" transform="translate(139.5,45) scale(3.5) translate(-8,-8)">
+          <path d="M0 8.00002C0 4.75562 1.93132 1.9623 4.70701 0.707031L5.65436 1.65438C5.2352 2.51383 5 3.47946 5 4.50002C5 8.08987 7.91015 11 11.5 11C12.5206 11 13.4862 10.7648 14.3456 10.3457L15.293 11.293C14.0377 14.0687 11.2444 16 8 16C3.58172 16 0 12.4183 0 8.00002Z"/>
+          <path d="M11.5 7.00003L9 4.50003L11.5 2.00003L14 4.50003L11.5 7.00003Z"/>
+        </g>
+
+        <circle id="toggle-circle" cx="46.5" cy="45" r="40" opacity="0.5"/>
+      </svg>
+    </button>
+  </div>
+    </div>
+
+
+    
+  </header>
+
+  <div class="sidebar_mobile">
+    <a id="nav1"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined home">home</span>
+        <div class="label">
+          <p class="p">Головна сторінка</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav2"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">add_home</span>
+        <div class="label">
+          <p class="p">Знайти житло</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav3"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">3p</span>
+        <div class="label">
+          <p class="p">Соціальна допомога</p>
+        </div>
+      </div>
+    </a>
+    
+    <a id="nav4"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">medical_services</span>
+        <div class="label">
+          <p class="p">Медична допомога</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav5"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">article_person</span>
+        <div class="label">
+          <p class="p">Необхідні документи</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav6"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">school</span>
+        <div class="label">
+          <p class="p">Освіта</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav7"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">work</span>
+        <div class="label">
+          <p class="p">Працевлаштування</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav8"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">gavel</span>
+        <div class="label">
+          <p class="p">Правова допомога</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav9"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">contact_emergency</span>
+        <div class="label">
+          <p class="p">Корисні контакти</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav10"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">map_search</span>
+        <div class="label">
+          <p class="p">Карта міста</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav11"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">contact_support</span>
+        <div class="label">
+          <p class="p">FAQ</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav11"> 
+      <div class="sidebar-item sidebar-item-mobile-theme-lang">
+        <div class="mobile" style="display:flex;justify-content:center; width: 50px;height: 30px; z-index: 1005; margin-left: 10px;">
+        <button onclick="console.log('clicked!')" id="themeButtonMobile" style="background:none;border:none;padding:0;cursor:pointer">
+          <svg id="themeToggleMobile" width="50" height="30" viewBox="0 0 186 90"
+            xmlns="http://www.w3.org/2000/svg" aria-label="Light/Dark toggle icon">
+
+          <rect x="3" y="3" width="180" height="84" rx="42" ry="42"
+                fill="blue" stroke="#000" stroke-width="4"/>
+
+          <g id="sunMob" transform="translate(46.5,45)" fill="none" stroke="#000" stroke-linecap="round">
+            <circle r="14" />
+            <line x1="0" y1="-24" x2="0" y2="-32" stroke-width="6"/>
+            <line x1="0" y1="24"  x2="0" y2="32"  stroke-width="6"/>
+            <line x1="-24" y1="0" x2="-32" y2="0" stroke-width="6"/>
+            <line x1="24"  y1="0" x2="32" y2="0" stroke-width="6"/>
+            <line x1="17"  y1="-17" x2="23" y2="-23" stroke-width="6"/>
+            <line x1="-17" y1="17"  x2="-23" y2="23"  stroke-width="6"/>
+            <line x1="-17" y1="-17" x2="-23" y2="-23" stroke-width="6"/>
+            <line x1="17"  y1="17"  x2="23" y2="23"  stroke-width="6"/>
+          </g>
+
+          <g id="moonMob" transform="translate(139.5,45) scale(3.5) translate(-8,-8)">
+            <path d="M0 8.00002C0 4.75562 1.93132 1.9623 4.70701 0.707031L5.65436 1.65438C5.2352 2.51383 5 3.47946 5 4.50002C5 8.08987 7.91015 11 11.5 11C12.5206 11 13.4862 10.7648 14.3456 10.3457L15.293 11.293C14.0377 14.0687 11.2444 16 8 16C3.58172 16 0 12.4183 0 8.00002Z"/>
+            <path d="M11.5 7.00003L9 4.50003L11.5 2.00003L14 4.50003L11.5 7.00003Z"/>
+          </g>
+
+          <circle id="toggle-circle-mobile" cx="46.5" cy="45" r="40" opacity="0.5"/>
+        </svg>
+      </button>
+  </div>
+        <div class="label-mobile">
+          <p class="p">Тема</p>
+        </div>
+      </div>
+    </a>
+
+    <a  id="nav11"> 
+      <div class="sidebar-item sidebar-item-mobile-theme-lang">
+        <div class="language-container-mobile">
+        <p class="active">УКР</p>
+        <p>ENG</p>
+      </div>
+        <div class="label-mobile">
+          <p class="p">Мова</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  
+  
+  
+  
+  <div class="sidebar">
+    <span class="material-symbols-outlined burger_menu">menu</span>
+
+    <a id="nav1"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined home">home</span>
+        <div class="label">
+          <p class="p">Головна сторінка</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav2"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">add_home</span>
+        <div class="label">
+          <p class="p">Знайти житло</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav3"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">3p</span>
+        <div class="label">
+          <p class="p">Соціальна допомога</p>
+        </div>
+      </div>
+    </a>
+    
+    <a id="nav4"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">medical_services</span>
+        <div class="label">
+          <p class="p">Медична допомога</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav5"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">article_person</span>
+        <div class="label">
+          <p class="p">Необхідні документи</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav6"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">school</span>
+        <div class="label">
+          <p class="p">Освіта</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav7"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">work</span>
+        <div class="label">
+          <p class="p">Працевлаштування</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav8"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">gavel</span>
+        <div class="label">
+          <p class="p">Правова допомога</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav9"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">contact_emergency</span>
+        <div class="label">
+          <p class="p">Корисні контакти</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav10"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">map_search</span>
+        <div class="label">
+          <p class="p">Карта міста</p>
+        </div>
+      </div>
+    </a>
+
+    <a id="nav11"> 
+      <div class="sidebar-item">
+        <span class="material-symbols-outlined">contact_support</span>
+        <div class="label">
+          <p class="p">FAQ</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+<main>
+  <section class="section1-general">
+    <div class="welcome-text">
+      <h1>Пошук житла</h1>
+      <p>Тимчасове житло, прихистки, оренда та корисні контакти для новомістян.</p>
+      <p><strong>ВПО можуть скористатися кількома способами отримати житло — як тимчасове, так і на довший термін.</strong></p>
+    </div>
+
+    <div class="welcome-image">
+      <img src="Photos.index/Clip path group.png" alt="welcome">
+    </div>
+  </section>
+
+  <section class="section2">
+
+    <div class="wrap">
+      <div class="but active">Соціальне житло</div>
+      <div class="butbl">Оренда квартир</div>
+      <div class="but">Тимчасове житло та прихистки</div>
+      <div class="butbl">Юридична допомога з питань житла</div>
+    </div>
+
+    <div class="info-panel">
+      <button class="arrow left" type="button">‹</button>
+
+      <div class="slider">
+        <div class="slides">
+
+          <div class="slide">
+            <div class="info-left">
+              <p><strong>Соціальне житло</strong> — це житло з фондів громади для тимчасового проживання ВПО.</p>
+
+              <h4>Як отримати</h4>
+              <ul>
+                <li>стати на облік для забезпечення житлом;</li>
+                <li>подати заяву та документи ВПО;</li>
+                <li>рішення ухвалює спеціальна комісія.</li>
+              </ul>
+
+              <div class="important">
+                ❗ Пріоритет мають сімʼї з дітьми, люди з інвалідністю, пенсіонери, багатодітні родини.
+              </div>
+            </div>
+
+            <div class="info-right">
+              <h4>ЦНАП Кременчуцької міської ради</h4>
+              <p>
+                👉 <a href="https://maps.google.com/?q=вул. Покровська, 14, Кременчук" target="_blank" rel="noopener">
+                  вул. Покровська, 14
+                </a>
+              </p>
+              <p>
+                👉 <a href="https://maps.google.com/?q=вул. Героїв України, 11А, Кременчук" target="_blank" rel="noopener">
+                  вул. Героїв України, 11А
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="info-left">
+              <p><strong>Оренда квартир</strong> — ВПО можуть орендувати житло на загальних умовах або з використанням державної підтримки.</p>
+
+              <h4>Де шукати оренду</h4>
+              <ul>
+                <li>онлайн-платформи нерухомості (Rieltor.ua, Doba.ua, Kvartirkov, Airbnb);</li>
+                <li>місцеві оголошення та рієлторські агентства.</li>
+              </ul>
+            </div>
+
+            <div class="info-right">
+              <p><strong>Субсидія на оренду житла</strong> — держава передбачила субсидію на оренду житла для ВПО, якщо витрати на оренду перевищують частину доходу сім’ї.</p>
+
+              <h4>Оформлення:</h4>
+              <li>
+                ЦНАП Кременчука<br>
+                👉 <a href="https://maps.google.com/?q=вул. Покровська, 14, Кременчук" target="_blank">
+                  вул. Покровська, 14
+                </a><br>
+                👉 <a href="https://maps.google.com/?q=вул. Героїв України, 11А, Кременчук" target="_blank">
+                  вул. Героїв України, 11А
+                </a>
+              </li>
+              <li>
+                Пенсійний фонд України:<br>
+                👉 <a href="https://maps.google.com/?q=вул. Велика Набережна, 9, Кременчук" target="_blank" rel="noopener">
+                  м. Кременчук, вул. Велика Набережна, 9
+                </a>
+              </li>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="info-left">
+              <p><strong>Тимчасове житло</strong> — тимчасове житло надається ВПО безкоштовно або з оплатою лише комунальних послуг.</p>
+
+              <h4>Доступні варіанти:</h4>
+              <ul>
+                <li>гуртожитки комунальної та відомчої форми;</li>
+                <li>місця тимчасового проживання;</li>
+                <li>приватний прихисток від громадян.</li>
+              </ul>
+
+              <div class="important">
+                ❗ Поселення відбувається за рішенням комісії або через відповідальні служби громади.
+              </div>
+            </div>
+
+            <div class="info-right">
+              <h4>Довідки та запис:</h4>
+              <li>
+                ЦНАП Кременчука<br>
+                👉 <a href="https://maps.google.com/?q=вул. Покровська, 14, Кременчук" target="_blank">
+                  вул. Покровська, 14
+                </a><br>
+                👉 <a href="https://maps.google.com/?q=вул. Героїв України, 11А, Кременчук" target="_blank">
+                  вул. Героїв України, 11А
+                </a>
+              </li>
+              <p>Через міські гуманітарні штаби.</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="info-left">
+              <p><strong>Юридична допомога</strong> — ВПО можуть отримати безкоштовну юридичну допомогу, пов’язану з житловими питаннями.</p>
+
+              <h4>У чому допоможуть</h4>
+              <ul>
+                <li>роз’яснення щодо соціального і тимчасового житла;</li>
+                <li>допомога з договорами оренди;</li>
+                <li>консультації щодо субсидій та компенсацій;</li>
+                <li>захист прав у разі конфліктів з орендодавцем.</li>
+              </ul>
+            </div>
+
+            <div class="info-right">
+              <h4>Кременчуцький місцевий центр БПД</h4>
+              <p>
+                👉 <a href="https://maps.google.com/?q=вул. Небесної Сотні, 54, Кременчук" target="_blank" rel="noopener">
+                  м. Кременчук, вул. Небесної Сотні, 54
+                </a>
+              </p>
+              <p>
+                📞 <a href="tel:0800213103">0 800 213 103</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="arrow right" type="button">›</button>
+    </div>
+
+    <div class="dots"></div>
+
+  </section>
+
+  <a href="index.html" class="get-started-button">На головну</a>
+</main>
+
+
+  <footer class="footer">
+    <p>© 2025 VPO Help. Всі права захищені.</p>
+  </footer>
+  <script >
+        
+  const slides = document.querySelector(".slides");
+  const buttons = document.querySelectorAll(".wrap div");
+  const dotsContainer = document.querySelector(".dots");
+  let index = 0;
+  const total = document.querySelectorAll(".slide").length;
+
+
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement("div");
+    d.classList.add("dot");
+    if (i === 0) d.classList.add("active");
+    d.onclick = () => move(i);
+    dotsContainer.appendChild(d);
+  }
+
+  const dots = document.querySelectorAll(".dot");
+
+  function move(i) {
+    index = i;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+
+    buttons.forEach(b => b.classList.remove("active"));
+    buttons[index].classList.add("active");
+
+    dots.forEach(d => d.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  buttons.forEach((btn, i) => btn.onclick = () => move(i));
+
+  document.querySelector(".arrow.right").onclick = () =>
+    move((index + 1) % total);
+
+  document.querySelector(".arrow.left").onclick = () =>
+    move((index - 1 + total) % total);
+
+
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
