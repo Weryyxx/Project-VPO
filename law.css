@@ -1,5 +1,12 @@
 /*#region Reset & Global*/
-
+body, body * {
+  transition: background-color .50s ease,
+              color .50s ease,
+              border-color .50s ease,
+              box-shadow .50s ease,
+              fill .50s ease,
+              stroke .50s ease;
+}
 
 body{
   margin:0;
@@ -1465,4 +1472,5 @@ body.dark .section1-general .welcome-text p {
     transform: translateY(0);
     opacity: 1;
   }
+
 }
